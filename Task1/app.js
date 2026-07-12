@@ -66,12 +66,12 @@ function showAllOperations() {
         resultElement.appendChild(listElement);
     }
 }
-function welcomeUser(){
+function welcomeUser() {
     const fName = fNameElement.value;
     const lName = lNameElement.value;
     const age = ageElement.value;
 
-    welcomeElement.innerHTML = "Welcome " + fName +" " + lName + " to my website"
+    welcomeElement.innerHTML = "Welcome " + fName + " " + lName + " to my website"
 }
 actionBtnElement.addEventListener('click', showAllOperations)
-welcomeBtn.addEventListener('click',welcomeUser)
+welcomeBtn.addEventListener('click', welcomeUser)
