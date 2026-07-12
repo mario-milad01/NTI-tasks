@@ -59,6 +59,7 @@ function showAllOperations() {
             result: y - x
         },
     ]
+    resultElement.innerHTML = null;
     for (let op of result) {
         const listElement = document.createElement('li');
         listElement.className = 'result-element';
