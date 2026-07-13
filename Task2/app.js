@@ -3,9 +3,14 @@ const userNameElement = document.getElementById('userName');
 const userAgeElement = document.getElementById('age');
 const userYearsOfExpElement = document.getElementById('exp');
 const reportElement = document.getElementById('report-info')
+
+
 const userNameInputElement = document.getElementById('nameInput');
 const userPasswordElement = document.getElementById('password');
 const loginBtn = document.getElementById('login');
+
+
+const file3TaskBtn = document.getElementById('file3TaskBtn');
 
 var performaceLevel = '';
 var jobCatagory = '';
@@ -88,17 +93,53 @@ function showRatingPrompot() {
 sendActionBtnElement.addEventListener('click', showRatingPrompot)
 
 
-function validateUser(){
+function validateUser() {
     const user_name = userNameInputElement.value;
     const userPassword = userPasswordElement.value;
-    
-    if(user_name===''){
+
+    if (user_name === '') {
         console.log('user name is required!');
+
+    } else {
+        if (userPassword.length < 8) {
+            console.log('password must be at least 8 characters')
+        } else {
+            console.log('user name is ' + user_name);
+            console.log('password is: ' + userPassword);
+        }
     }
-    if(userPassword.length <8){
-        console.log('password must be at least 8 characters')
-    }
-    
+
+
 }
 
-loginBtn.addEventListener('click',validateUser)
+loginBtn.addEventListener('click', validateUser);
+
+function startFile3Task() {
+    const name = prompt("Enter your Name: ");
+    const year = prompt("Enter your Birth Year (ex:2004): ");
+    const isStudent = confirm("Are you Student? ");
+    let cat = '';
+    const currentYear = new Date().getFullYear();
+    const content = "Dont forget to study hard!"
+    var userAge = currentYear - +year;
+    if (userAge < 13) {
+        cat = 'Kid'
+    } else if (userAge >= 13 && userAge <= 17) {
+        cat = 'Teen'
+    } else if (userAge >= 18 && userAge <= 59) {
+        cat = 'Adult'
+    } else {
+        cat = 'Senior'
+    }
+
+    console.log('Hello ' + name + ", You are " + userAge + " years old");
+    console.log("Catagory: " + cat);
+    isStudent ? console.log(content) : null;
+
+    window.alert(`
+                Hello ${name}, You are ${userAge} years old.
+                Catagory: ${cat}.
+                ${isStudent ? content : ''}
+        `)
+}
+file3TaskBtn.addEventListener('click', startFile3Task)
