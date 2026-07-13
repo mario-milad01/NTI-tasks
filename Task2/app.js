@@ -3,7 +3,9 @@ const userNameElement = document.getElementById('userName');
 const userAgeElement = document.getElementById('age');
 const userYearsOfExpElement = document.getElementById('exp');
 const reportElement = document.getElementById('report-info')
-
+const userNameInputElement = document.getElementById('nameInput');
+const userPasswordElement = document.getElementById('password');
+const loginBtn = document.getElementById('login');
 
 var performaceLevel = '';
 var jobCatagory = '';
@@ -84,3 +86,19 @@ function showRatingPrompot() {
     }
 }
 sendActionBtnElement.addEventListener('click', showRatingPrompot)
+
+
+function validateUser(){
+    const user_name = userNameInputElement.value;
+    const userPassword = userPasswordElement.value;
+    
+    if(user_name===''){
+        console.log('user name is required!');
+    }
+    if(userPassword.length <8){
+        console.log('password must be at least 8 characters')
+    }
+    
+}
+
+loginBtn.addEventListener('click',validateUser)
