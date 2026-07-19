@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./app.js" defer></script>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <ul id="main-content">
+        <li class="box">
+            <h1>Users Registration</h1>
+            <form id="user-registration-form">
+                <ul class="data">
+                    <li class="input-group">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="fname">
+                    </li>
+                    <li class="input-group">
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lname">
+                    </li>
+                    <li class="input-group">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" name="age">
+                    </li>
+                    <li class="input-group">
+                        <label for="graduate">Is Graduated</label>
+                        <input type="checkbox" id="graduate" name="graduate">
+                    </li>
+                </ul>
+                <div class="ctaForm">
+                    <button id="save-user-btn" class="active">Add User</button>
+                    <button id="update-user-btn" class="disabled">Update User</button>
+                </div>
+            </form>
+        </li>
+        <li id="users">
+            <h2>All Users</h2>
+            <ul class="search-list">
+                <li class="search-bar">
+                    <input type="text" id="search-bar" placeholder="Search for users....">
+                </li>
+                <li class="search-checkbox">
+                    <label for="search-checkBox">Graduated ? </label>
+                    <input type="checkbox" id="searchBox" name="searchBox">
+                </li>
+            </ul>
+            <ul id="users-list">
+
+            </ul>
+        </li>
+    </ul>
+
+</body>
+
+</html>
