@@ -1,0 +1,14 @@
+{
+  "name": "mario-milad-my-first-package",
+  "version": "1.0.0",
+  "description": "this is my first simple package on npm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "first-package"
+  ],
+  "author": "mario milad",
+  "license": "ISC"
+}
