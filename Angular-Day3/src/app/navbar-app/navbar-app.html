@@ -1,0 +1,21 @@
+<header>
+    <ul class="header">
+        <h1>Smart Products</h1>
+        <nav>
+            <ul class="nav-list">
+                <li><a routerLink="/smart-products">Smart Products</a></li>
+
+                @if(isLoggedin){
+                <li><button class="btn logout" (click)="handleToggleLoggedIn()">Logout</button></li>
+                }@else {
+                <li><button class="btn login" (click)="handleToggleLoggedIn()">Login</button></li>
+                }
+            </ul>
+        </nav>
+    </ul>
+</header>
+@if(isLoggedin){
+<p class="welcome-text">Welcome {{userName}}</p>
+}@else{
+<p class="welcome-text">Please Login First</p>
+}

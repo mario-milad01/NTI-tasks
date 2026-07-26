@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    padding: 0.5rem 1.2rem;
+    border-radius: 0.8rem;
+    text-align: center;
+    background-color: rgb(255, 109, 25);
+    border-color: rgb(255, 109, 25);
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+        scale: 1.1;
+    }
+}
+
+.login {
+    background-color: rgb(1, 202, 1);
+    border-color: rgb(1, 202, 1);
+}
+
+.logout {
+    background-color: rgb(255, 62, 62);
+    border-color: rgb(255, 62, 62);
+}

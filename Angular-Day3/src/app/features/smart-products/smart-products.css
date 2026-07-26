@@ -1,0 +1,120 @@
+.products-header {
+    text-align: center;
+    margin: 1rem auto;
+    width: 40%;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.main-proudtcs-content {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+.search-box {
+    width: 40%;
+    margin: 2rem auto;
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    input {
+        width: 80%;
+        padding: 0.5rem 1rem;
+        outline: none;
+        border-radius: 0.8rem;
+    }
+}
+
+.status-list {
+    width: 80%;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.status-btn {
+    background-color: lightblue;
+    border-color: lightblue;
+    color: black;
+}
+
+.status-result {
+    text-align: center;
+    font-size: 1.3rem;
+    background-color: rgb(255, 173, 135);
+    border-radius: 0.8rem;
+    padding: 1rem;
+    width: 60%;
+    margin: 2rem auto;
+}
+
+.products {
+    width: 90%;
+    margin: 1rem auto;
+    padding: 1rem;
+}
+
+.products-list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.product-card {
+    width: 33%;
+    height: 20rem;
+    border-radius: 0.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: rgb(208, 238, 255);
+}
+
+.stock-avaliablity {
+    width: 50%;
+    margin: 1rem auto;
+
+    text-align: center;
+    color: white;
+}
+
+.avaliable {
+    padding: 1rem;
+    border-radius: 0.8rem;
+
+    background-color: rgb(65, 255, 65);
+}
+
+.notAvaliable {
+    padding: 1rem;
+    border-radius: 0.8rem;
+
+    background-color: rgb(255, 89, 89);
+}
+
+.clear {
+    margin: 1rem auto;
+    justify-self: center;
+}
+
+.fallback-text {
+    text-align: center;
+    font-size: 1.3rem;
+    color: gray;
+    margin: auto;
+}

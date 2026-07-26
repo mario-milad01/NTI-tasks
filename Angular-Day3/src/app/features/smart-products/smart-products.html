@@ -1,0 +1,70 @@
+<header class="products-header">
+    <h1>
+        {{pageName}}
+    </h1>
+</header>
+<section class="main-products-content">
+    <div class="search-box">
+        <input type="text" [(ngModel)]="userSearch" placeholder="Search for any product">
+        <button class="btn" (click)="handleSearch()">Search</button>
+    </div>
+    <div>
+        <ul class="status-list">
+            <span>Status: </span>
+            <li><button class="status-btn btn" (click)="setStatus('idle')">Idle</button></li>
+            <li><button class="status-btn btn" (click)="setStatus('loading')">Loading</button></li>
+            <li><button class="status-btn btn" (click)="setStatus('success')">Success</button></li>
+            <li><button class="status-btn btn" (click)="setStatus('error')">Error</button></li>
+        </ul>
+    </div>
+    <div class="status-result">
+
+        @switch(status){
+        @case('idle'){
+        <p>The status now is idle.</p>
+        }
+        @case('success'){
+        <p>The status now is success.</p>
+        }
+        @case('loading'){
+        <p>The status now is loading.</p>
+        }
+        @default{
+        <p>Tje status now is error!</p>
+        }
+        }
+    </div>
+    <div class="products">
+        <ul class="products-list">
+            @for(product of localProducts; track product.id){
+            <li class="product-card">
+                <h3>{{product.name}}</h3>
+                <p>
+                    price: {{product.price}} $
+                </p>
+                <p>
+                    {{product.category}}
+                </p>
+                <div class="stock-avaliablity">
+                    @if(product.inStock){
+                    <p class="avaliable">
+                        In Stock
+                    </p>
+                    }@else {
+                    <p class="notAvaliable">Out Of Stock</p>
+                    }
+
+                </div>
+            </li>
+            }@empty {
+            <p class="fallback-text">There is no products avaliable yet!</p>
+            }
+        </ul>
+        <div class="clear">
+            <button class="btn clear" (click)="handleClearProducts()" [disabled]="isDeisabled">Clear All
+                Products</button>
+
+        </div>
+
+    </div>
+</section>
