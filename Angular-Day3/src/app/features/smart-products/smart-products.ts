@@ -35,7 +35,7 @@ localProducts =  this.products;
   }
   handleClearProducts(){
     this.isDeisabled=true;
-    this.products = []
+    this.localProducts = []
   }
 
 }
